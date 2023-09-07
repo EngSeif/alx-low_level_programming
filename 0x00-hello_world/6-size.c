@@ -2,7 +2,7 @@
 /**
 * main - Entry point
 *
-* Description: A C program that prints wiht printf function
+* Description: A C program that prints size of data types
 *
 * Return: Alawys 0 (Success)
 */

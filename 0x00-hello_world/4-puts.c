@@ -2,7 +2,7 @@
 /**
 * main - Entry point
 *
-* Description: A C program that prints whit put function
+* Description: A C program that prints with put function
 *
 * Return: Alawys 0 (Success)
 */
