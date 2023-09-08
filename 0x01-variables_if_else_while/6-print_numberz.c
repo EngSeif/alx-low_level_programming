@@ -4,19 +4,19 @@
 /**
  * main - Entry point
  *
- * Description: A C program that digits
+ * Description: A C program that prints digits with putchar
  *
  * Return: Always 0 (Success)
 */
 int main(void)
 {
-	int i = 0;
+	int i = 48;
 
-	while (i <= 9)
+	while (i <= 57)
 	{
-		printf("%d", i);
+		putchar(i);
 		i++;
 	}
-	printf("\n");
+	putchar('\n');
 	return (0);
 }

@@ -4,7 +4,7 @@
 /**
  * main - Entry point
  *
- * Description: A C program that prints alphabet
+ * Description: A C program that prints alphabet without Q and E
  *
  * Return: Always 0 (Success)
 */
