@@ -4,8 +4,7 @@
 /**
  * main - Entry point
  *
- * Description: A C program that prints a random number type
- *
+ * Description: A C program that prints last digit
  * Return: Always 0 (Success)
 */
 int main(void)
