@@ -18,14 +18,13 @@ void print_times_table(int n)
 
 	if (n <= 15 && n >= 0)
 	{
-	while (i < (n + 1))
+	while (i <= n)
 	{
 		j = 1;
 		_putchar(48);
-		while (j < (n + 1))
+		while (j <= n)
 		{
 			_putchar(',');
-			_putchar(' ');
 			_putchar(' ');
 			k = i * j;
 			if (k <= 9)
