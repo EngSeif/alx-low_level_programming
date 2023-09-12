@@ -1,19 +1,42 @@
 #include "main.h"
 #include <stdio.h>
 /**
+ * numLength - return length of string
+ *
+ * @num : operand numver
+ *
+ * Return: no of digits
+*/
+
+int numLength(int num)
+{
+	int length = 0;
+
+	if (!num)
+		return (1);
+
+	while (num)
+	{
+		num = num / 10;
+		length += 1;
+	}
+	return (length);
+}
+
+/**
  * main - Entry point
  *
- * Description: A C program that prints sum of muiltiplies
+ * Description: A C program that prints fibbonci
  *
  * Return: Always 0 (Success)
 */
 
 int main(void)
 {
-	int n = 0;
-	unsigned long f1 = 0, f2 = 1, s, mx = 100000000, f1o = 0, f2o = 0, sumo = 0;
+	int n, initial0s;
+	unsigned long f1 = 1, f2 = 2, s, mx = 100000000, f1o = 0, f2o = 0, sumo = 0;
 
-	for (n = 0; n < 98; n++)
+	for (n = 1; n <= 98; n++)
 	{
 		if (f1o > 0)
 			printf("%lu", f1o);
@@ -29,9 +52,9 @@ int main(void)
 
 		s = (f1 + f2) % mx;
 		sumo = f1o + f2o + (f1 + f2) / mx;
-		f1 = f1;
+		f1 = f2;
 		f1o = f2o;
-		f2 = sum;
+		f2 = s;
 		f2o = sumo;
 
 		if (n != 98)
