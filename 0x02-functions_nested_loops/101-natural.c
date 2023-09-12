@@ -15,10 +15,11 @@ int main(void)
 
 	while (n < 1024)
 	{
-		if (n / 3 == 0 || n / 5 == 0)
+		if (n % 3 == 0 || n % 5 == 0)
 		{
 			s = s + n;
 		}
+	n++;
 	}
 	printf("The sum of these multiples is : %d\n", s);
 	return (0);
