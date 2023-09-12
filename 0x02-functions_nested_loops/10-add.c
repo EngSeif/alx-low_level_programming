@@ -14,19 +14,6 @@
 
 int add(int i, int j)
 {
-	int s;
-
-	s = i + j;
-
-	if (s / 10 == 0)
-	{
-		_putchar(s + 48);
-		_putchar('\n');
-	}
-	else
-	{
-		_putchar((s / 10) + 48);
-		_putchar((s % 10) + 48);
-	}
+	int s = i + j;
 	return (s);
 }
