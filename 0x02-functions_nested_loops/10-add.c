@@ -28,4 +28,5 @@ int add(int i, int j)
 		_putchar((s / 10) + 48);
 		_putchar((s % 10) + 48);
 	}
+	return (s);
 }
