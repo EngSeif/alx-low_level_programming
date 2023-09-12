@@ -30,11 +30,17 @@ void print_times_table(int n)
 			{
 				_putchar(' ');
 			}
-			else
+			else if (k > 9 && k < 100)
 			{
 				_putchar((k / 10) + 48);
+				_putchar((k % 10) + 48);
 			}
-			_putchar((k % 10) + 48);
+			else
+			{
+				_putchar((k / 100) + 48);
+				_putchar(((k %100) / 10) + 48);
+				_putchar(((k %100) % 10) + 48);
+			}
 			j++;
 		}
 		_putchar('\n');
