@@ -21,6 +21,6 @@ int main(void)
 		}
 	n++;
 	}
-	printf("The sum of these multiples is : %d\n", s);
+	printf("%d\n", s);
 	return (0);
 }
