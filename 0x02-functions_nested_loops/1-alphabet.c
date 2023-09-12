@@ -1,21 +1,18 @@
-#include <unistd.h>
 #include "main.h"
 
 /**
- * main - Entry point
+ * print_alphabet - use _putchar to print alphabet
  *
- * Description: A C program that prints with _putchar fun
+ * Description: A C program that prints alphabet
  *
  * Return: Always 0 (Success)
 */
 
-int main(void)
+void print_alphabet(void)
 {
-	char str[] = "abcdefghijklmnopqrstuvwxyz";
 	int c;
 
-	for (c = 0 ; c < 27 ; c++)
-		_putchar(str[c]);
+	for (c = 'a' ; c <= 'z' ; c++)
+		_putchar(c);
 	_putchar('\n');
-	return (0);
 }
