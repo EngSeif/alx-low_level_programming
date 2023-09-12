@@ -14,8 +14,6 @@
 
 int add(int i, int j)
 {
-	int i;
-	int j;
 	int s;
 
 	s = i + j;
