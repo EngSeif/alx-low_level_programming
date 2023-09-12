@@ -12,6 +12,7 @@
 
 void print_times_table(int n)
 {
+	int i = 0;
 	int j;
 	int k;
 
