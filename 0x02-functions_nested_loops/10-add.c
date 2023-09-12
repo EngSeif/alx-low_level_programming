@@ -12,7 +12,7 @@
  * Return: Always 0 (Success)
 */
 
-int add(int i, int j);
+int add(int i, int j)
 {
 	int i;
 	int j;
