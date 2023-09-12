@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * times_table - prints times table
+ * add - add two numbers
  *
- * Description: A C program that prints times table
+ * Description: A C program that add two numbers
  *
  * @i : first num
  *
@@ -15,5 +15,6 @@
 int add(int i, int j)
 {
 	int s = i + j;
+
 	return (s);
 }
