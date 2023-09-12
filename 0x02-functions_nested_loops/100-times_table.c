@@ -38,8 +38,8 @@ void print_times_table(int n)
 			else
 			{
 				_putchar((k / 100) + 48);
-				_putchar(((k %100) / 10) + 48);
-				_putchar(((k %100) % 10) + 48);
+				_putchar(((k % 100) / 10) + 48);
+				_putchar(((k % 100) % 10) + 48);
 			}
 			j++;
 		}
