@@ -9,7 +9,7 @@
  *
  * Return:(Success)
 */
-void print_triangle(int size);
+void print_triangle(int size)
 {
 	int h, b;
 
