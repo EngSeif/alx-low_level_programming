@@ -11,24 +11,23 @@ void more_numbers(void)
 {
 	int i;
 	int j = 0;
+	int k;
 
 while (j <= 10)
-{
+	{
 	i = 0;
 	while (i <= 14)
 	{
-		if (i < 10)
+		k = i;
+		if (i > 9)
 		{
-		_putchar(i + 48);
+			_putchar(1 + 48);
+			k = i % 10;
 		}
-		else
-		{
-			_putchar((i / 10) + 48);
-			_putchar((i % 10) + 48);
-		}
+		_putchar(k + 48);
 		i++;
 	}
 	_putchar('\n');
 	j++;
-}
+	}
 }
