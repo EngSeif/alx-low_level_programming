@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isdigit - draws a straight line in the terminal.
+ * print_line - draws a straight line in the terminal.
  *
  * Description: A C program that draws a straight line in the terminal.
  *
