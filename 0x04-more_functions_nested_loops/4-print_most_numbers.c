@@ -3,7 +3,7 @@
 /**
  * print_most_numbers -  prints the numbers, from 0 to 9 except 4 and 2
  *
- * Description: A C program that  prints the numbers, from 0 to 9 except 4 and 2
+ * Description:C program that  prints the numbers, from 0 to 9 except 4 and 2
  *
  * Return:(Success)
 */
