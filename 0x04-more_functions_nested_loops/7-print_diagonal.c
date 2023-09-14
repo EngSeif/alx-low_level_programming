@@ -18,7 +18,7 @@ if (n > 0)
 {
 	for (i = 1; i <= n; i++)
 	{
-		for (s = 1; i <= s; s++)
+		for (s = 1; s <= i; s++)
 		{
 		_putchar(' ');
 		}
