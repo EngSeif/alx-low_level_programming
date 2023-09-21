@@ -14,7 +14,7 @@ char *rot13(char *s)
 
 	char rot13[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	char Rot13[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
-	int *ptr = s;
+	char *ptr = s;
 
 	while (*s)
 	{
@@ -26,7 +26,7 @@ char *rot13(char *s)
 				break;
 			}
 		}
-		c++;
+		s++;
 	}
 
 	return (s);
