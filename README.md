@@ -1,1 +1,1 @@
-this repo is for low level programming
+for c programming
