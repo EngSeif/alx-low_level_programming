@@ -11,7 +11,7 @@ int oot(int n, int i);
 
 int is_prime_number(int n)
 {
-	return (oot(n, 1));
+	return (oot(n, 2));
 }
 
 /**
@@ -23,9 +23,9 @@ int is_prime_number(int n)
 
 int oot(int n, int i)
 {
-	if (n > 1 || n <= i)
+	if (n > 1 || i >= n)
 		return (1);
-	if (n % i == 0 || n < 2)
+	if (n % i == 0 || n <= 1)
 		return (0);
 	else
 		return (oot(n, i + 1));
