@@ -25,7 +25,7 @@ int oot(int n, int i)
 {
 	if (n > 1 || i >= n)
 		return (1);
-	if (n % i == 0 || n <= 1)
+	else if (n % i == 0 || n <= 1)
 		return (0);
 	else
 		return (oot(n, i + 1));
