@@ -23,7 +23,7 @@ int is_prime_number(int n)
 
 int oot(int n, int i)
 {
-	if (n > 1 || i >= n)
+	if (n > 1 && i >= n)
 		return (1);
 	else if (n % i == 0 || n <= 1)
 		return (0);
