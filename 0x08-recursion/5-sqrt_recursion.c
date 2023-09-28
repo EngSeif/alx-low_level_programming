@@ -13,18 +13,20 @@ int _sqrt_recursion(int n)
 {
 	return (sqroot(n, 1));
 }
+
 /**
  * sqrt - checks for avaliabilty of sqrt
  * @n : number which for sqrt is calc
  * @val : helps to check if num has a sqrt
  * Return: int
 */
+
 int sqroot(int n, int val)
 {
 	if (val * val == n)
 		return (val);
 	else if (val * val < n)
-		sqroot(n, val + 1);
+		return (sqroot(n, val + 1));
 	else
 		return (-1);
 }
