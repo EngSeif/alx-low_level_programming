@@ -15,7 +15,7 @@ int _sqrt_recursion(int n)
 }
 
 /**
- * sqrt - checks for avaliabilty of sqrt
+ * sqroot - checks for avaliabilty of sqrt
  * @n : number which for sqrt is calc
  * @val : helps to check if num has a sqrt
  * Return: int
