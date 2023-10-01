@@ -21,7 +21,6 @@ char  *move_past_star(char *s2)
  * Return: int
 */
 
-int wildcmp(char *s1, char *s2);
 int inception(char *s1, char *s2)
 {
 	int ret = 0;
