@@ -1,7 +1,9 @@
 #include "main.h"
 
 /**
- * last_index(char *s) - returns number of ele of string
+ * last_index - returns number of ele of string
+ * check - see if the last ind is = to 1st
+ * is_palindrome - see if the last ind is = to 1st
  * @s : holds string value
  * Return: int
 */
@@ -31,7 +33,7 @@ int is_palindrome(char *s)
 }
 
 /**
- * is_palindrome - see if the last ind is = to 1st
+ * check - see if the last ind is = to 1st
  * @s : holds string value
  * @start : starting index
  * @end : ending index
@@ -42,9 +44,15 @@ int is_palindrome(char *s)
 int check(char *s, int start, int end, int mod)
 {
 	if ((start == end && mod != 0) || (start == end + 1 && mod == 0))
+	{
 		return (1);
+	}
 	else if (s[start] !=  s[end])
+	{
 		return (0);
+	}
 	else
-		 return (check(s, start + 1, end - 1, mod));
+	{
+		return (check(s, start + 1, end - 1, mod));
+	}
 }
