@@ -5,10 +5,13 @@
 *
 * Description: A C program that prints with put function
 * @argv :ele
+* @argc : no
 * * Return: Alawys 0 (Success)
 */
 
-int main(char *argv)
+int main(int argc, char *argv[])
 {
-	printff("%s\n", argv[0]);
+	printf("%s\n", argv[0]);
+	(void) argc;
+	return (0);
 }
