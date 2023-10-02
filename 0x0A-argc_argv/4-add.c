@@ -20,7 +20,7 @@ int main(int argc, char *argv[])
 	{
 		for (c = argc[argv]; *c; c++)
 		{
-		if ( *c < '0' || *c > '9')
+		if (*c < '0' || *c > '9')
 		{
 			printf("Error\n");
 			return (1);
