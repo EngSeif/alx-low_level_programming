@@ -1,7 +1,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
-* *create_array -  creates an array of chars
+* free_grid - frees a 2 dimensional grid
 * @grid : 2D array
 * @height : columns
 * Return: Alawys 0 (Success)
