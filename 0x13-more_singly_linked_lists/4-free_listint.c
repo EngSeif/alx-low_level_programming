@@ -4,8 +4,8 @@
 
 
 /**
- * listint_len - prints number of elements of a linked list
- * @h: pointer to the listint_t list to print
+ * free_listint - Free all of list memory
+ * @head: pointer to the listint_t list
  *
  * Return: the number of nodes printed
  */
