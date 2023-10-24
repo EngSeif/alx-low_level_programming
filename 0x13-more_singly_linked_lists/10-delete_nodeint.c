@@ -1,56 +1,42 @@
+#include <stdlib.h>
+#include <string.h>
 #include <stdio.h>
 #include "lists.h"
-#include <stdlib.h>
 
 /**
- * create_new_node - create a new node
- * @n : value on data in the new node
- * Return: the number of nodes printed
+ * delete_nodeint_at_index - deletes a node in a linked list at a certain index
+ * @head: pointer to the first element in the list
+ * @index: index of the node to delete
+ *
+ * Return: 1 (Success), or -1 (Fail)
  */
-listint_t *create_new_node(int n)
-{
-	listint_t *new;
-
-	new = malloc(sizeof(listint_t));
-	if (new == NULL)
-		return (NULL);
-	new->n = n;
-	new->next = NULL;
-	return (new);
-}
-/**
- * delete_nodeint_at_index - delete node
- * @head: pointer to the listint_t list
- * @index : index to the new node to be put
- * Return: the number of nodes printed
- */
-
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
-	unsigned int i;
-	listint_t *tmp, *node;
+	listint_t *temp = *head;
+	listint_t *current = NULL;
+	unsigned int i = 0;
 
-	tmp = *head;
-	if (head == NULL || *head == NULL)
+	if (*head == NULL)
 		return (-1);
-	for (i = 0; i < index - 1 && tmp != NULL && index != 0; i++)
-		tmp = tmp->next;
-	if (tmp == NULL)
-		return (-1);
+
 	if (index == 0)
 	{
-		node = tmp->next;
-		free(tmp);
-		*head = node;
+		*head = (*head)->next;
+		free(temp);
+		return (1);
 	}
-	else
+
+	while (i < index - 1)
 	{
-		if (tmp->next == NULL)
-			node = tmp->next;
-		else
-			node = tmp->next->next;
-		free(tmp);
-		tmp->next = node;
+		if (!temp || !(temp->next))
+			return (-1);
+		temp = temp->next;
+		i++;
 	}
+
+	current = temp->next;
+	temp->next = current->next;
+	free(current);
+
 	return (1);
 }
