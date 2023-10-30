@@ -1,44 +1,36 @@
 #include "main.h"
+
 /**
- * read_textfile - gets the number of printed chars
- * @filename : pointer to filename
- * @letters : sizeof letters
- * Return: 1 (Success), or -1 (Fail)
+ * read_textfile - reads a text file and prints the letters
+ * @filename: filename.
+ * @letters: numbers of letters printed.
+ *
+ * Return: numbers of letters printed. It fails, returns 0.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	char *buffer = malloc(letters + 1);
-	FILE *fp = fopen(filename, "r");
-	ssize_t bytes_read = fread(buffer, 1, letters, fp);
-	ssize_t bytes_written = fwrite(buffer, 1, bytes_read, stdout);
+	int fd;
+	ssize_t nrd, nwr;
+	char *buf;
 
-	if (filename == NULL)
+	if (!filename)
 		return (0);
-	if (fp == NULL)
-		return (0);
-	if (buffer == NULL)
-	{
-		fclose(fp);
-		free(buffer);
-		return (0);
-	}
-	if (bytes_read < 0)
-	{
-		fclose(fp);
-		free(buffer);
-		return (0);
-	}
-	buffer[bytes_read] = '\0';
 
-	if (bytes_written < 0)
-	{
-		fclose(fp);
-		free(buffer);
+	fd = open(filename, O_RDONLY);
+
+	if (fd == -1)
 		return (0);
-	}
-	fclose(fp);
-	free(buffer);
 
-	return (bytes_written + 1);
+	buf = malloc(sizeof(char) * (letters));
+	if (!buf)
+		return (0);
 
+	nrd = read(fd, buf, letters);
+	nwr = write(STDOUT_FILENO, buf, nrd);
+
+	close(fd);
+
+	free(buf);
+
+	return (nwr);
 }
