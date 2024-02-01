@@ -1,6 +1,6 @@
 #include "hash_tables.h"
 /**
- * hash_table_print - Hash Table To Retrieve Value From.
+ * hash_table_print - Print Keys And Values of HashTable.S
  * @ht: Pointer To Hash Table
  *
  * Return: NULL
