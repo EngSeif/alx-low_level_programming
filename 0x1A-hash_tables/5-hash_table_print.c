@@ -1,13 +1,13 @@
 #include "hash_tables.h"
 /**
- * hash_table_get - Hash Table To Retrieve Value From.
+ * hash_table_print - Hash Table To Retrieve Value From.
  * @ht: Pointer To Hash Table
  *
  * Return: NULL
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int i = 0, c1 = 0, c2 = 0;
+	unsigned long int i = 0, count = 0;
 	hash_node_t *Tmp;
 
 	if (ht == NULL)
@@ -18,12 +18,12 @@ void hash_table_print(const hash_table_t *ht)
 		Tmp = ht->array[i];
 		while (Tmp != NULL)
 		{
-			c1++;
+			count++;
 			Tmp = Tmp->next;
 		}
 	}
 
-	if (c1 == 0)
+	if (count == 0)
 	{
 		printf("{}\n");
 		return;
@@ -35,8 +35,7 @@ void hash_table_print(const hash_table_t *ht)
 		Tmp = ht->array[i];
 		while (Tmp != NULL)
 		{
-			c2++;
-			if (c2 < c1)
+			if (count > 1)
 				printf("'%s': '%s', ", Tmp->key, Tmp->value);
 			else
 			{
@@ -44,6 +43,7 @@ void hash_table_print(const hash_table_t *ht)
 				return;
 			}
 			Tmp = Tmp->next;
+			count--;
 		}
 	}
 }
