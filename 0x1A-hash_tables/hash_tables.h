@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 
-/* ======== Hash Table Structs - Node And Table ======== */
+/* ================ Hash Table Structs - Node And Table ================ */
 
 /**
  * struct hash_node_s - Node of a hash table
@@ -36,7 +36,9 @@ unsigned long int size;
 hash_node_t **array;
 } hash_table_t;
 
+/* ================ Functions Prototype ================ */
 
 hash_table_t *hash_table_create(unsigned long int size);
+unsigned long int hash_djb2(const unsigned char *str);
 
 #endif
