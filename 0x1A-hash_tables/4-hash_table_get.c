@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 /**
  * hash_table_get - Hash Table To Retrieve Value From.
- * @ht: Key In Hash Table To Be Found
+ * @ht: Pointer To Hash Table
  * @key: Key In Hash Table To Be Found
  *
  * Return: Value of Key
