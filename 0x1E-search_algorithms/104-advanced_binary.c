@@ -35,6 +35,8 @@ void print_array(int *array, size_t first, size_t last)
 
 int func(int *array, size_t left, size_t right, int value)
 {
+	size_t mid;
+
 	if (left > right)
 	{
 		return (-1);
@@ -42,7 +44,7 @@ int func(int *array, size_t left, size_t right, int value)
 
 	print_array(array, left, right);
 
-	size_t mid = left + (right - left) / 2;
+	mid = left + (right - left) / 2;
 
 	if (array[mid] == value && (mid == left || array[mid - 1] < value))
 	{
