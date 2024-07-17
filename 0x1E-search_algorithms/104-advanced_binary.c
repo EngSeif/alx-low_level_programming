@@ -41,8 +41,13 @@ int func(int *array, size_t first, size_t last, int value)
 	{
 		print_array(array, first, last);
 		mid = (first + last) / 2;
-		if (array[mid] == value && (last - first == 1))
-			return (mid);
+		if (array[mid] == value)
+		{
+			if (mid == first || array[mid - 1] != value)
+				return (mid);
+			else
+				return (func(array, first, mid, value));
+		}
 		else if (value > array[mid])
 		{
 			first = mid + 1;
@@ -50,16 +55,6 @@ int func(int *array, size_t first, size_t last, int value)
 		}
 		else
 		{
-			if (array[mid] == value)
-			{
-				last = mid;
-				return (func(array, first, last, value));
-			}
-			else
-			{
-				last = mid - 1;
-				return (func(array, first, last, value));
-			}
 			last = mid - 1;
 			return (func(array, first, last, value));
 		}
