@@ -23,7 +23,7 @@ listint_t *jump_list(listint_t *list, size_t size, int value)
 	last = list;
 	for (i = 0; i < m; i++)
 		last = last->next;
-	while (!((value >= first->n) && (value <= last->n)) && last != NULL)
+	while (!((value >= first->n) && (value <= last->n)) && last->next != NULL)
 	{
 		printf("Value checked at index [%ld] = [%d]\n", last->index, last->n);
 		first = last;
