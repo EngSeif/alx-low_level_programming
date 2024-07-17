@@ -26,40 +26,36 @@ void print_array(int *array, size_t first, size_t last)
 /**
  * func - Do recursive binary search
  * @array: Array to Be Searched
- * @first: first index
- * @last: last index
+ * @left: first index
+ * @right: last index
  * @value: value to be searched for
  *
  * Return: index of value in array if found else -1
  */
 
-int func(int *array, size_t first, size_t last, int value)
+int func(int *array, size_t left, size_t right, int value)
 {
-	size_t mid;
-
-	if (first > last)
+	if (left > right)
 	{
 		return (-1);
 	}
 
-	print_array(array, first, last);
-	mid = first + (last - first) / 2;
-	if (array[mid] == value)
+	print_array(array, left, right);
+
+	size_t mid = left + (right - left) / 2;
+
+	if (array[mid] == value && (mid == left || array[mid - 1] < value))
 	{
-		if (mid == first || array[mid - 1] != value)
-			return (mid);
-		else
-			return (func(array, first, mid, value));
+		return (mid);
 	}
-	else if (value > array[mid])
+
+	if (array[mid] >= value)
 	{
-		first = mid + 1;
-		return (func(array, first, last, value));
+		return (func(array, left, mid, value));
 	}
 	else
 	{
-		last = mid - 1;
-		return (func(array, first, last, value));
+		return (func(array, mid + 1, right, value));
 	}
 }
 
