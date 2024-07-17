@@ -3,20 +3,20 @@
 /**
  * print_array - Print An Array
  * @array: Array to Be Printed
- * @first: first index
- * @last: last index
+ * @left: left index
+ * @right: right index
  *
  * Return: None
  */
 
-void print_array(int *array, size_t first, size_t last)
+void print_array(int *array, size_t left, size_t right)
 {
 	size_t i;
 
 	printf("Searching in array:");
-	for (i = first; i <= last; i++)
+	for (i = left; i <= right; i++)
 	{
-		if (i == last)
+		if (i == right)
 			printf(" %d\n", array[i]);
 		else
 			printf(" %d,", array[i]);
@@ -26,8 +26,8 @@ void print_array(int *array, size_t first, size_t last)
 /**
  * func - Do recursive binary search
  * @array: Array to Be Searched
- * @left: first index
- * @right: last index
+ * @left: left index
+ * @right: right index
  * @value: value to be searched for
  *
  * Return: index of value in array if found else -1
@@ -46,9 +46,10 @@ int func(int *array, size_t left, size_t right, int value)
 
 	mid = left + (right - left) / 2;
 
-	if (array[mid] == value && (mid == left || array[mid - 1] < value))
+	if (array[mid] == value)
 	{
-		return (mid);
+		if (mid == left || array[mid - 1] < value)
+			return (mid);
 	}
 
 	if (array[mid] >= value)
