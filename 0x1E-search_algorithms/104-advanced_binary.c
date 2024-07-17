@@ -43,7 +43,7 @@ int func(int *array, size_t first, size_t last, int value)
 	}
 
 	print_array(array, first, last);
-	mid = (first + last) / 2;
+	mid = first + (last - first) / 2;
 	if (array[mid] == value)
 	{
 		if (mid == first || array[mid - 1] != value)
