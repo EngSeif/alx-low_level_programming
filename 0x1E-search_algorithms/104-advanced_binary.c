@@ -37,29 +37,30 @@ int func(int *array, size_t first, size_t last, int value)
 {
 	size_t mid;
 
-	if (!(first > last))
+	if (first > last)
 	{
-		print_array(array, first, last);
-		mid = (first + last) / 2;
-		if (array[mid] == value)
-		{
-			if (mid == first || array[mid - 1] != value)
-				return (mid);
-			else
-				return (func(array, first, mid, value));
-		}
-		else if (value > array[mid])
-		{
-			first = mid + 1;
-			return (func(array, first, last, value));
-		}
-		else
-		{
-			last = mid - 1;
-			return (func(array, first, last, value));
-		}
+		return (-1);
 	}
-	return (-1);
+
+	print_array(array, first, last);
+	mid = (first + last) / 2;
+	if (array[mid] == value)
+	{
+		if (mid == first || array[mid - 1] != value)
+			return (mid);
+		else
+			return (func(array, first, mid, value));
+	}
+	else if (value > array[mid])
+	{
+		first = mid + 1;
+		return (func(array, first, last, value));
+	}
+	else
+	{
+		last = mid - 1;
+		return (func(array, first, last, value));
+	}
 }
 
 /**
@@ -73,7 +74,7 @@ int func(int *array, size_t first, size_t last, int value)
 
 int advanced_binary(int *array, size_t size, int value)
 {
-	if (array == NULL)
+	if (array == NULL || size == 0)
 		return (-1);
 
 	return (func(array, 0, size - 1, value));
